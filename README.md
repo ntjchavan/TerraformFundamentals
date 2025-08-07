@@ -23,11 +23,10 @@ Copy require configuration from below link for your service like storage/vm
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account
 
-Terraform commands
+Terraform commands:
 terraform init
 terraform plan
 terraform apply
 terraform destroy
 
 Delete App registration using Microsoft Entra ID service once local testing completed.
-
