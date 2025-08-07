@@ -8,24 +8,25 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = "key"
-  tenant_id = "key"
-  client_id = "key"
-  client_secret = "key"
+  subscription_id = var.subscription_id
+  tenant_id = var.tenant_id
+  client_id = var.client_id
+  client_secret = var.client_secret
   features {
     
   }
 }
 
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "rg" {
   name     = "rg-storage"
   location = "West Europe"
 }
 
+// https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account
 resource "azurerm_storage_account" "example" {
   name                     = "myfirstnetajistorage"
-  resource_group_name      = azurerm_resource_group.example.name
-  location                 = azurerm_resource_group.example.location
+  resource_group_name      = azurerm_resource_group.rg.name
+  location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
 

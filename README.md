@@ -9,6 +9,7 @@ Updated environment path using Edit the system environment variable, Update path
 
 Install extention in VS Code Terraform, HashiCorp Terraform & Hashicorp HCL
 
+subscription_id: your subscription id
 tenant_id: availabe in AZ Microsoft Entra ID service
 client_id: click on App registration (Manage) in Entra ID service, add registration app, you will get client_id as Application (client) ID
 client_secret: click on above create App registration, click on Certificates & Client (Manage), Add new client secret, use value as client_secret
@@ -30,3 +31,9 @@ terraform apply
 terraform destroy
 
 Delete App registration using Microsoft Entra ID service once local testing completed.
+
+------------------------------
+create a file with name variables.tf & define your variable which are used in yours.tf file.
+assign variables value in file terraform.tfvars. Don't commit this file. No need to commit sensitive data.
+(Use terraform.tfvars for local dev and *.tfvars per environment (dev.tfvars, prod.tfvars, etc.))
+we can use environment variable as well instead of .tfvars (terraform.tfvars)
