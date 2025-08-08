@@ -37,3 +37,10 @@ create a file with name variables.tf & define your variable which are used in yo
 assign variables value in file terraform.tfvars. Don't commit this file. No need to commit sensitive data.
 (Use terraform.tfvars for local dev and *.tfvars per environment (dev.tfvars, prod.tfvars, etc.))
 we can use environment variable as well instead of .tfvars (terraform.tfvars)
+
+------------------------------ terraform.tfvars ---------------------------
+create file terraform.tfvars which valid values
+subscription_id = "subscription_id"
+tenant_id       = "tenant_id"
+client_id       = "client_id"
+client_secret   = "client_id"
