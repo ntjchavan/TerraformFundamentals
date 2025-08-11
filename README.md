@@ -44,3 +44,10 @@ subscription_id = "subscription_id"
 tenant_id       = "tenant_id"
 client_id       = "client_id"
 client_secret   = "client_id"
+
+----------------------- For Linux VM ----------------------
+add below two key in terraform.tfvars file .
+admin_username = "user name for your vm"
+ssh_public_key_path = "path of key" (e.g"C:/Users/{{user name}}/{{key name}}")
+(generate ssh_public_key_path key using powershell with command - ssh-keygen -t rsa -b 4096)
+

@@ -19,7 +19,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   name     = "rg-storage"
-  location = "West Europe"
+  location = "Central India"
 }
 
 // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account
