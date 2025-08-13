@@ -27,8 +27,8 @@ https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/
 Terraform commands:
 terraform init
 terraform plan
-terraform apply
-terraform destroy
+terraform apply or terraform apply -auto-approve
+terraform destroy or terraform destroy -auto-approve
 
 Delete App registration using Microsoft Entra ID service once local testing completed.
 
@@ -44,3 +44,21 @@ subscription_id = "subscription_id"
 tenant_id       = "tenant_id"
 client_id       = "client_id"
 client_secret   = "client_id"
+
+----------------------- For Linux VM ----------------------
+add below two key in terraform.tfvars file .
+admin_username = "user name for your vm"
+ssh_public_key_path = "path of file name .pub" 
+(e.g"C:/Users/{{user name}}/{{key name}}")
+(generate ssh_public_key_path key using powershell with command - ssh-keygen -t rsa -b 4096)
+
+update variables.tf file as well like below.
+variable "admin_username" {
+  type = string
+  description = "Admin username for VM"
+}
+
+variable "ssh_public_key_path" {
+  type = string
+  description = "Path to your SSH public key"
+}
