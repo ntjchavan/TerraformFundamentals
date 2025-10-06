@@ -21,7 +21,7 @@ provider "azurerm" {
 # Resource Group
 # =====================
 resource "azurerm_resource_group" "rg" {
-  name      = "tfrg-azurevm"
+  name      = "tfrg-azurevm-linuxvm"
   location  = "Central India"
 
   tags = {

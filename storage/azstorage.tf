@@ -18,7 +18,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-storage"
+  name     = "tfrg-azurerm-storage"
   location = "Central India"
 }
 
